@@ -3,6 +3,7 @@
 Traverse lockboxes
 """
 
+
 def canUnlockAll(boxes):
     """Check if all locked boxes can
     be unlocked"""
