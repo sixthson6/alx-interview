@@ -2,9 +2,8 @@
 """Rotate martix counterclockwise
 """
 
-
 def rotate_2d_matrix(matrix):
-    """ Given an n x n 2D matrix, rotate it 90 degrees clockwise
+    """Rotates an m by n 2D matrix in place.
     """
     if type(matrix) != list:
         return
@@ -16,9 +15,7 @@ def rotate_2d_matrix(matrix):
     cols = len(matrix[0])
     if not all(map(lambda x: len(x) == cols, matrix)):
         return
-
     c, r = 0, rows - 1
-
     for i in range(cols * rows):
         if i % rows == 0:
             matrix.append([])
@@ -28,5 +25,4 @@ def rotate_2d_matrix(matrix):
         matrix[-1].append(matrix[r][c])
         if c == cols - 1 and r >= -1:
             matrix.pop(r)
-            r -= 1
-            
+        r -= 1
